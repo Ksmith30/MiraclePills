@@ -152,6 +152,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-AT-TOx">
+                                <rect key="frame" x="28" y="624" width="334" height="45"/>
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbh-rJ-njD"/>
+                                    <segue destination="mzg-yf-0ir" kind="show" id="2Jg-bK-tYS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -169,6 +177,7 @@
                             <constraint firstItem="iNK-b2-vDx" firstAttribute="top" secondItem="dgx-hj-LQ3" secondAttribute="bottom" constant="8" id="Hei-o4-YOL"/>
                             <constraint firstItem="ajT-zZ-w0E" firstAttribute="top" secondItem="014-FL-nEL" secondAttribute="bottom" constant="8" id="Ilj-Hl-hpE"/>
                             <constraint firstItem="iL5-1L-3dK" firstAttribute="centerX" secondItem="6hr-2e-8SU" secondAttribute="centerX" id="Ins-2E-jgS"/>
+                            <constraint firstItem="sAc-AT-TOx" firstAttribute="leading" secondItem="iNK-b2-vDx" secondAttribute="leading" id="IrH-NQ-maG"/>
                             <constraint firstItem="6hr-2e-8SU" firstAttribute="top" secondItem="E9W-vD-ki0" secondAttribute="bottom" constant="25" id="J0u-vt-NXj"/>
                             <constraint firstItem="dgx-hj-LQ3" firstAttribute="leading" secondItem="3HJ-qg-GUV" secondAttribute="leading" id="MRS-fW-3Nw"/>
                             <constraint firstItem="014-FL-nEL" firstAttribute="leading" secondItem="C3s-cJ-VkS" secondAttribute="leading" id="NBV-yc-dnE"/>
@@ -191,6 +200,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="G8M-PK-kEA" secondAttribute="trailing" constant="20" id="fSw-Lx-AqL"/>
                             <constraint firstItem="0w2-aj-4Nk" firstAttribute="top" secondItem="ajT-zZ-w0E" secondAttribute="bottom" constant="8" id="gvf-TP-jSe"/>
                             <constraint firstItem="Ua3-hx-ArE" firstAttribute="top" secondItem="0w2-aj-4Nk" secondAttribute="bottom" constant="8" id="j09-J5-Sur"/>
+                            <constraint firstItem="sAc-AT-TOx" firstAttribute="top" secondItem="iNK-b2-vDx" secondAttribute="bottom" constant="25" id="ji9-aQ-jTg"/>
+                            <constraint firstItem="sAc-AT-TOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5F-gg-nrZ"/>
                             <constraint firstItem="RvH-XI-jzm" firstAttribute="top" secondItem="Pi5-Tb-iDh" secondAttribute="bottom" constant="8" id="ljt-xt-zih"/>
                             <constraint firstItem="Ua3-hx-ArE" firstAttribute="trailing" secondItem="0w2-aj-4Nk" secondAttribute="trailing" id="n6G-s9-yUq"/>
                             <constraint firstItem="3HJ-qg-GUV" firstAttribute="leading" secondItem="RvH-XI-jzm" secondAttribute="leading" id="nWV-Hz-j6V"/>
@@ -208,6 +219,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowBtn" destination="sAc-AT-TOx" id="b0s-OC-BW4"/>
                         <outlet property="countryField" destination="3HJ-qg-GUV" id="4pA-JF-dZO"/>
                         <outlet property="countryLbl" destination="RvH-XI-jzm" id="dpZ-M2-I9L"/>
                         <outlet property="statePicker" destination="pho-BQ-Zwv" id="Bif-WT-cOv"/>
@@ -218,10 +230,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="138.58695652173915"/>
+            <point key="canvasLocation" x="-206" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9QO-Fg-S2Z">
+            <objects>
+                <viewController id="mzg-yf-0ir" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kZh-Tl-aWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="JtO-NA-2MZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fds-gF-lx9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="LGU-8e-ZRV">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bE9-Ta-jgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411.59420289855075" y="114.94565217391305"/>
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
